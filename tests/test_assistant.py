@@ -25,12 +25,14 @@ from unittest.mock import patch
 from data_quality.models import ItemRecord, ReviewFinding
 from data_quality.ai_provider import MockAIProvider, LiteLLMAIProvider, create_ai_provider
 from config.settings import AppSettings, LiteLLMSettings
-from data_quality.rules import (
+from data_quality.rules.core import (
     MissingPartNumberRule,
     MalformedRowRule,
+    DuplicateRecordRule,
+)
+from data_quality.rules.ai import (
     CategoryMismatchAIRule,
     NormalizedDescriptionRule,
-    DuplicateRecordRule,
 )
 from data_quality.engine import DataQualityEngine
 

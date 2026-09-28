@@ -21,12 +21,14 @@ from config.logger import setup_logger
 
 logger = setup_logger()
 
-from data_quality.rules import (
+from data_quality.rules.core import (
     MalformedRowRule,
     MissingPartNumberRule,
+    DuplicateRecordRule,
+)
+from data_quality.rules.ai import (
     CategoryMismatchAIRule,
     NormalizedDescriptionRule,
-    DuplicateRecordRule,
 )
 from data_quality.engine import DataQualityEngine
 
@@ -94,20 +96,25 @@ def main():
     else:
         logger.info("Using mock AI provider.")
 
-    single_rules = [
+    # Core deterministic rules
+    core_rules = [
         MalformedRowRule(),
         MissingPartNumberRule(),
+    ]
+
+    # AI-assisted rules
+    ai_rules = [
         CategoryMismatchAIRule(ai_provider=ai_provider),
         NormalizedDescriptionRule(ai_provider=ai_provider),
     ]
 
-    # Multi-record rules
+    # Multi-record heuristic rules
     multi_rules = [
         DuplicateRecordRule(),
     ]
 
     logger.info("Initializing Data Quality Engine with selected rules.")
-    engine = DataQualityEngine(rules=single_rules, multi_record_rules=multi_rules)
+    engine = DataQualityEngine(rules=core_rules + ai_rules, multi_record_rules=multi_rules)
     findings = engine.evaluate(records)
 
     logger.info(f"Formatting {len(findings)} review candidates to JSON output.")

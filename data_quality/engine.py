@@ -8,7 +8,7 @@ ReviewFindings.
 
 from typing import List
 from data_quality.models import ItemRecord, ReviewFinding
-from data_quality.rules import Rule, MultiRecordRule
+from data_quality.rules.base import Rule, MultiRecordRule
 from config.logger import get_logger
 
 logger = get_logger()
@@ -41,7 +41,9 @@ class DataQualityEngine:
                 findings.extend(results)
                 rule_findings += len(results)
             if rule_findings > 0:
-                logger.debug(f"    Found {rule_findings} candidate issues.")
+                logger.info(f"    -> Finished {rule.__class__.__name__}. Found {rule_findings} candidate issues.")
+            else:
+                logger.info(f"    -> Finished {rule.__class__.__name__}. No issues found.")
 
         # Multi-record rules (e.g. duplicate detection)
         if self.multi_record_rules:
@@ -51,7 +53,9 @@ class DataQualityEngine:
             results = rule.evaluate_all(records)
             findings.extend(results)
             if results:
-                logger.debug(f"    Found {len(results)} candidate issues.")
+                logger.info(f"    -> Finished {rule.__class__.__name__}. Found {len(results)} candidate issues.")
+            else:
+                logger.info(f"    -> Finished {rule.__class__.__name__}. No issues found.")
 
         logger.info(f"Engine evaluation completed. Total findings: {len(findings)}")
         return findings

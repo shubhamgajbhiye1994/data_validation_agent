@@ -1,0 +1,70 @@
+[
+  {
+    "item_id": "1001",
+    "item_description": "bearing",
+    "manufacturer": "SKF",
+    "manufacturer_part_number": "",
+    "category": "Mechanical",
+    "unit_of_measure": "EA",
+    "source_system": "ERP-A"
+  },
+  {
+    "item_id": "1002",
+    "item_description": "SKF Bearing 6205 ZZ",
+    "manufacturer": "SKF",
+    "manufacturer_part_number": "6205-ZZ",
+    "category": "Electrical",
+    "unit_of_measure": "EA",
+    "source_system": "ERP-B"
+  },
+  {
+    "item_id": "1003",
+    "item_description": "O-Ring",
+    "manufacturer": "Parker",
+    "manufacturer_part_number": "OR-123",
+    "category": "Mechanical",
+    "unit_of_measure": "INVALID_UOM",
+    "source_system": "ERP-A"
+  },
+  {
+    "item_id": "1003",
+    "item_description": "O-Ring Seal",
+    "manufacturer": "Parker",
+    "manufacturer_part_number": "OR-123",
+    "category": "Mechanical",
+    "unit_of_measure": "EA",
+    "source_system": "ERP-C"
+  },
+  {
+    "item_id": "1004",
+    "item_description": "part",
+    "manufacturer": "Acme",
+    "manufacturer_part_number": "A-001",
+    "category": "General",
+    "unit_of_measure": "EA",
+    "source_system": "ERP-A"
+  },
+  {
+    "item_id": "1005",
+    "item_description": "",
+    "manufacturer": "Bosch",
+    "manufacturer_part_number": "B-100",
+    "category": "Electrical",
+    "unit_of_measure": "KG",
+    "source_system": "ERP-A"
+  },
+  {
+    "item_id": "1006",
+    "item_description": "  high voltage   cable  assembly  ",
+    "manufacturer": "Southwire",
+    "manufacturer_part_number": "HVC-200",
+    "category": "Plumbing",
+    "unit_of_measure": "M",
+    "source_system": "ERP-B"
+  },
+  {
+    "item_description": "Missing ID Row",
+    "manufacturer": "Test",
+    "category": "Mechanical"
+  }
+]

@@ -1,0 +1,34 @@
+2026-09-28 19:45:12,346 - data_quality - INFO - Using LiteLLM provider: model=openai/google/gemma-4-26b-a4b-qat, api_base=http://192.168.0.101:1234/v1
+2026-09-28 19:48:20,473 - data_quality - INFO - Using LiteLLM provider: model=openai/google/gemma-4-26b-a4b-qat, api_base=http://192.168.0.101:1234/v1
+2026-09-28 19:50:22,771 - data_quality - INFO - Starting Data Quality Assistant CLI.
+2026-09-28 19:50:22,771 - data_quality - INFO - Loading records from: sample_data/sample.json
+2026-09-28 19:50:22,771 - data_quality - INFO - Successfully loaded 8 records.
+2026-09-28 19:50:22,771 - data_quality - INFO - Using LiteLLM provider: model=openai/google/gemma-4-26b-a4b-qat, api_base=http://192.168.0.101:1234/v1
+2026-09-28 19:50:22,771 - data_quality - INFO - Initializing Data Quality Engine with selected rules.
+2026-09-28 19:50:22,771 - data_quality - INFO - Engine starting evaluation of 8 records.
+2026-09-28 19:50:22,771 - data_quality - INFO - Applying 4 single-record rules...
+2026-09-28 19:50:22,771 - data_quality - INFO -  -> Running MalformedRowRule
+2026-09-28 19:50:22,771 - data_quality - INFO -  -> Running MissingPartNumberRule
+2026-09-28 19:50:22,771 - data_quality - INFO -  -> Running CategoryMismatchAIRule
+2026-09-28 19:50:48,562 - data_quality - INFO -  -> Running NormalizedDescriptionRule
+2026-09-28 19:51:13,439 - data_quality - INFO - Applying 1 multi-record rules...
+2026-09-28 19:51:13,439 - data_quality - INFO -  -> Running DuplicateRecordRule
+2026-09-28 19:51:13,440 - data_quality - INFO - Engine evaluation completed. Total findings: 12
+2026-09-28 19:51:13,440 - data_quality - INFO - Formatting 12 review candidates to JSON output.
+2026-09-28 19:51:13,442 - data_quality - INFO - Data Quality Assistant finished successfully.
+2026-09-28 19:51:48,757 - data_quality - INFO - Starting Data Quality Assistant CLI.
+2026-09-28 19:51:48,757 - data_quality - INFO - Loading records from: sample_data/sample.json
+2026-09-28 19:51:48,757 - data_quality - INFO - Successfully loaded 8 records.
+2026-09-28 19:51:48,757 - data_quality - INFO - Using LiteLLM provider: model=openai/google/gemma-4-26b-a4b-qat, api_base=http://192.168.0.101:1234/v1
+2026-09-28 19:51:48,757 - data_quality - INFO - Initializing Data Quality Engine with selected rules.
+2026-09-28 19:51:48,757 - data_quality - INFO - Engine starting evaluation of 8 records.
+2026-09-28 19:51:48,757 - data_quality - INFO - Applying 4 single-record rules...
+2026-09-28 19:51:48,757 - data_quality - INFO -  -> Running MalformedRowRule
+2026-09-28 19:51:48,757 - data_quality - INFO -  -> Running MissingPartNumberRule
+2026-09-28 19:51:48,758 - data_quality - INFO -  -> Running CategoryMismatchAIRule
+2026-09-28 19:52:13,173 - data_quality - INFO -  -> Running NormalizedDescriptionRule
+2026-09-28 19:52:38,233 - data_quality - INFO - Applying 1 multi-record rules...
+2026-09-28 19:52:38,234 - data_quality - INFO -  -> Running DuplicateRecordRule
+2026-09-28 19:52:38,234 - data_quality - INFO - Engine evaluation completed. Total findings: 13
+2026-09-28 19:52:38,234 - data_quality - INFO - Formatting 13 review candidates to JSON output.
+2026-09-28 19:52:38,235 - data_quality - INFO - Data Quality Assistant finished successfully.
